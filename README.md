@@ -8,19 +8,19 @@ This project demonstrates how to build a serverless, event-driven data pipeline 
 Architecture Overview
 
 Flow:
-Amazon S3 → AWS Lambda → AWS Step Functions → AWS Glue → Amazon Redshift
+1.Amazon S3 → AWS Lambda → AWS Step Functions → AWS Glue → Amazon Redshift
 
-Amazon S3 acts as the data landing zone where raw files are uploaded.
+2.Amazon S3 acts as the data landing zone where raw files are uploaded.
 
-AWS Lambda is triggered by S3 events and initiates the Step Functions workflow.
+3.AWS Lambda is triggered by S3 events and initiates the Step Functions workflow.
 
-AWS Step Functions orchestrates the ETL process, managing data flow across services.
+4.AWS Step Functions orchestrates the ETL process, managing data flow across services.
 
-AWS Glue (PySpark) performs data cleansing, transformation, and loading into Redshift.
+5.AWS Glue (PySpark) performs data cleansing, transformation, and loading into Redshift.
 
-Amazon Redshift serves as the analytical data warehouse for downstream reporting and queries.
+6.Amazon Redshift serves as the analytical data warehouse for downstream reporting and queries.
 
-DynamoDB maintains metadata configurations and pipeline state for dynamic orchestration.
+7.DynamoDB maintains metadata configurations and pipeline state for dynamic orchestration.
 
 Key Features
 
